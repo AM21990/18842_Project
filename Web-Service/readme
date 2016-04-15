@@ -1,0 +1,30 @@
+export GOPATH=$HOME/akshita/
+Compile: go install akshita/
+Run: /Users/rajdeepmann/akshita/bin/akshita
+
+-- go get all packages
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer (if error on go get gorilla mux)
+
+
+Mongodb Setup:
+install mongodb
+export PATH=/Users/rajdeepmann/akshita/mongodb/bin:$PATH
+sudo mongod
+
+Mongo terminal:
+cd akshita/mongodb
+./bin/mongo
+
+
+fetch from terminal:
+curl -G http://localhost:8080/fetchAllPosts
+
+insert in mongodb
+
+db.PetGagPosts.insert( {user_name: "Akshita", image_url: "https://v.cdn.vine.co/r/avatars/050772A5341197694558906068992_35c56600b3a.2.1.jpg?versionId=2QyvDQhrHIvG01OZYYaTl4aVZ89k5l4t", up_votes: Number(10), down_votes: Number(2), comments: [{user_cname: "Mike", user_comment: "Like it!"}, {user_cname: "Nancy", user_comment: "So cute!"}]} );
+
+db.PetGagPosts.insert( {user_name: "user2", image_url: "https://pbs.twimg.com/profile_images/521554275713830913/TBY5IslL.jpeg", up_votes: Number(20), down_votes: Number(3), comments: [{user_cname: "Mike", user_comment: "Like it!"}, {user_cname: "Nancy", user_comment: "So cute!"}]} );
+
+db.PetGagPosts.insert( {user_name: "user3", image_url: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqU7nNVUYaCGsWLI5QXCWQqo7lHKkpTJzOy9KrnN1AXevvLJ1N", up_votes: Number(16), down_votes: Number(15), comments: [{user_cname: "Mike", user_comment: "Like it!"}, {user_cname: "Nancy", user_comment: "So cute!"}]} );
+
+db.PetGagPosts.insert( {user_name: "user4", image_url: "http://static.boredpanda.com/blog/wp-content/org_uploads/2014/06/image92.jpg", up_votes: Number(4), down_votes: Number(23), comments: [{user_cname: "Mike", user_comment: "Like it!"}, {user_cname: "Nancy", user_comment: "So cute!"}]} );
